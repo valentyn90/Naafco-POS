@@ -1,0 +1,35 @@
+.banner {
+	background: url(../img/banner.jpg) no-repeat;
+	background-size: cover;
+	position: relative;
+	height: 173px;
+	width: 100%;
+
+	.notification {
+		width: 350px;
+		position: absolute;
+		top: 40%;
+		right: 10%;
+
+		ul {
+			list-style: none;
+
+			li {
+				display: inline-flex;
+				border-right: 1px solid #fff;
+				padding: 0 10px;
+				line-height: 1;
+
+				a {
+					i {
+						color: #fff;
+					}
+				}
+				&:last-of-type {
+					border-right: 0;
+				}
+			}
+		}
+	}
+}
+

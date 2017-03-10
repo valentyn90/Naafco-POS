@@ -1,3 +1,5 @@
+// google fonts
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat:400,600,700');
 
 /*
  * Universal colours for links, unless overriden
@@ -71,15 +73,6 @@ h5 {
 h6 {
 	@extend %h;
 	font-size: $font-size-h6;
-}
-
-ol li,
-ul li {
-	padding-bottom: 0.5rem;
-
-	&:last-child {
-		padding-bottom: 0;
-	}
 }
 
 

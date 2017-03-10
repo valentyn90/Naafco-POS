@@ -24,8 +24,10 @@ Copyright 2015-2015 Saddam Azad
 @import "helpers/functions";
 @import "helpers/helpers";
 
-// Theme
-// @import "themes/dark";
+// Components
+@import "components/home";
+@import "components/breadcrumb";
+@import "components/select";
 
 // Base
 @import "base/default";
@@ -37,7 +39,6 @@ Copyright 2015-2015 Saddam Azad
 @import "layout/aside";
 @import "layout/main";
 @import "layout/footer";
-@import "layout/page-post-archive";
 
 // Shame
 @import "shame";
