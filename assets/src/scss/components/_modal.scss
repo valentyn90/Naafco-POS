@@ -1,0 +1,62 @@
+.modal-content {
+	border-radius: 0;
+
+	.modal-header {
+		padding: 15px 0;
+
+		.close {
+			display: block;
+			position: absolute;
+			right: 5%;
+			top: 2%;
+			color: #f26c4f;
+			border: 1px solid #f26c4f;
+			border-radius: 50%;
+
+			span {
+				padding: 4px;
+			}
+
+			&:hover {
+				opacity: 1;
+			}
+			
+			&:focus {
+				outline: 0;
+			}
+		}
+
+		.modal-title {
+			font-size: 18px;
+		    font-family: "Montserrat";
+		    text-transform: capitalize;
+		    color: rgb(255, 255, 255);
+		    text-align: center;
+		    background-color: $theme-color;
+		    line-height: 2.889;
+		    width: 100%;
+		}
+	}
+
+	.modal-body {
+		form {
+			.form-control {
+				padding: 0.7rem .75rem;
+				border-radius: 0;
+				border: 1px solid rgba(0,0,0,.25);
+			}
+			button {
+				font-size: 20px;
+			    font-family: "Montserrat";
+			    text-transform: uppercase;
+			    color: rgb(255, 255, 255);
+			    text-align: center;
+			    background-color: $theme-color;
+			    line-height: 1.889;
+			    width: 100%;
+			    border: 0;
+			    border-radius: 0;
+			}
+		}
+	}
+}

@@ -70,7 +70,40 @@
           </li>
         </ul>
       </div>
-      <a href="#" class="add-user"><i class="fa fa-plus-circle fa-4x" aria-hidden="true"></i></a>
+      <a href="#" class="add-user" data-toggle="modal" data-target="#addUserModal"><i class="fa fa-plus-circle fa-4x" aria-hidden="true"></i></a>
+      <!-- Modal -->
+        <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title" id="exampleModalLabel">create new user</h5>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="username" aria-describedby="emailHelp" placeholder="User Name">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" class="form-control" id="tel" aria-describedby="contactHelp" placeholder="Phone">
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="password" aria-describedby="passwordHelp" placeholder="Password">
+                  </div>
+                  <button type="submit" class="btn btn-primary">create</button>
+                </form>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- #Modal -->
       <div class='content isOpen'>
         <div class="banner">
             <div class="notification">
