@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
 Theme Name: Ultimos
 Theme URI: http://schoolmars.com
@@ -17,6 +16,19 @@ Copyright 2015-2015 Saddam Azad
   display:         flex;
   min-height: 100%;
 }
+.wrapper .add-user {
+  position: absolute;
+  top: 23%;
+  right: -10%;
+  z-index: 1;
+  width: 290px;
+  color: #f26c4f;
+}
+.wrapper .add-user .fa {
+  line-height: .5; 
+  background-color: #fff;
+  border-radius: 50%;
+}
 
 .sidebar {
   position: absolute;
@@ -24,30 +36,28 @@ Copyright 2015-2015 Saddam Azad
 }
 
 .content {
+  width: calc(100% - 220px); 
   padding: 0;
   background: #fff;
   -webkit-transition: -webkit-transform .3s;
        -o-transition:      -o-transform .3s;
-          transition:         transform .3s; 
+          transition:         transform .3s;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 .content .button {
   position: absolute;
-  margin-top: -42px;
+  margin-top: -48px;
   margin-left: -50px; 
   cursor: pointer;
 }
 .content .button:before {
-  margin-top: -10px; 
-  font: 30px fontawesome;
+  padding: 0 5px; 
+  margin-top: -10px;
+  font: 25px fontawesome;
   color: #fff;
   content: '\f0c9';
+  border: 2px solid #fff;
 }
 
 .content.isOpen {
@@ -83,7 +93,7 @@ Copyright 2015-2015 Saddam Azad
   font-family: 'Lato', sans-serif;
   font-size: 30px;
   line-height: 1.5625;
-  line-height: 2.5;
+  line-height: 2;
   color: #fff;
   text-align: left;
   text-transform: uppercase;
@@ -97,10 +107,11 @@ Copyright 2015-2015 Saddam Azad
 .nav li a {
   position: relative;
   display: block;
-  padding: 15px 15px 15px 60px;
+  padding: 10px 15px 10px 60px;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 600;
+  font-weight: normal;
   line-height: 1.889;
   color: #fff !important;
   border-bottom: 1px solid #222; 
@@ -132,21 +143,31 @@ Copyright 2015-2015 Saddam Azad
 }
 
 .nav li a.active {
-  background-color: #34495e;
+  background-color: #202f3e;
 }
 
-.breadcrumb {
-  background-color: transparent;
+.yearly-sell {
+  margin-right: 15px;
 }
 
-.today-sell {
+.today-sell,
+.weekly-sell,
+.monthly-sell,
+.yearly-sell {
+  max-width: 286px;
   -webkit-box-shadow: 0 0 9.9px .1px rgba(170, 170, 170, .2);
           box-shadow: 0 0 9.9px .1px rgba(170, 170, 170, .2);
 }
-.today-sell .today-sell-ammount {
+.today-sell .sell-ammount,
+  .weekly-sell .sell-ammount,
+  .monthly-sell .sell-ammount,
+  .yearly-sell .sell-ammount {
   text-align: center;
 }
-.today-sell .today-sell-ammount h3 {
+.today-sell .sell-ammount h3,
+    .weekly-sell .sell-ammount h3,
+    .monthly-sell .sell-ammount h3,
+    .yearly-sell .sell-ammount h3 {
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 600;
@@ -159,9 +180,12 @@ Copyright 2015-2015 Saddam Azad
   -webkit-font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
 }
-.today-sell .today-sell-ammount .amount {
+.today-sell .sell-ammount .amount,
+    .weekly-sell .sell-ammount .amount,
+    .monthly-sell .sell-ammount .amount,
+    .yearly-sell .sell-ammount .amount {
   font-family: 'Montserrat', sans-serif;
-  font-size: 46px;
+  font-size: 40px;
   font-weight: 600;
   font-weight: normal; 
   line-height: 1.889;
@@ -172,6 +196,98 @@ Copyright 2015-2015 Saddam Azad
   -webkit-font-feature-settings: "kern" 1;
   text-rendering: optimizeLegibility;
 }
+.today-sell .last,
+  .weekly-sell .last,
+  .monthly-sell .last,
+  .yearly-sell .last {
+  padding: 10px 0;
+  margin-top: 25px; 
+  margin-left: 12px;
+  text-align: center;
+  background-color: #87d37c;
+}
+.today-sell .last h5, .today-sell .last .last-amount,
+    .weekly-sell .last h5, .weekly-sell .last .last-amount,
+    .monthly-sell .last h5, .monthly-sell .last .last-amount,
+    .yearly-sell .last h5, .yearly-sell .last .last-amount {
+  margin: 0; 
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-weight: normal;
+  line-height: 1.889;
+  line-height: 1.2;
+  color: white;
+  text-transform: uppercase;
+
+  -webkit-font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
+}
+.today-sell .last .last-amount,
+    .weekly-sell .last .last-amount,
+    .monthly-sell .last .last-amount,
+    .yearly-sell .last .last-amount {
+  margin: .3rem !important;
+}
+
+.new-users {
+  margin-top: 20px;
+  margin-right: 15px;
+  background-color: #f0f0f0;
+}
+.new-users .title {
+  font-family: "Montserrat";
+  font-size: 18px;
+  line-height: 2.889;
+  color: #606060;
+  text-transform: capitalize;
+  letter-spacing: 0;
+  border-bottom: 0;
+}
+.new-users .title p i {
+  width: 60px;
+  text-align: center;
+}
+.new-users .title p span {
+  padding-right: 95px;
+  padding-left: 5px; 
+  border-right: 1px solid #d7d7d7;
+  border-left: 1px solid #d7d7d7;
+}
+.new-users .title p a {
+  float: right;
+  width: 80px; 
+  color: #606060;
+}
+.new-users .users-info {
+  background-color: transparent;
+}
+.new-users .users-info p {
+  padding: 10px 0;
+  margin-bottom: 0;
+  background-color: #fff; 
+  border-bottom: 1px solid #d7d7d7;
+}
+.new-users .users-info p img {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #87d37c;
+}
+
+.breadcrumb {
+  background-color: transparent;
+}
+.breadcrumb .breadcrumb-item {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 1.714;
+  color: #858585;
+  text-align: left;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+}
 
 .select-hidden {
   display: none;
@@ -181,13 +297,14 @@ Copyright 2015-2015 Saddam Azad
 
 .select {
   position: relative;
-  left: 12px; 
+  left: 12px;
   display: inline-block;
   width: 97.5%;
   height: 40px;
   font-size: 16px;
   color: #fff;
   cursor: pointer;
+  border-bottom: 1px solid darkgray;
 }
 
 .select-styled {
@@ -197,29 +314,28 @@ Copyright 2015-2015 Saddam Azad
   bottom: 0;
   left: 0;
   padding: 8px 15px;
-  background-color: #c0392b;
+  color: #858585; 
+  background-color: transparent;
   -webkit-transition: all .2s ease-in;
        -o-transition: all .2s ease-in;
           transition: all .2s ease-in;
 }
-
 .select-styled:after {
   position: absolute;
-  top: 16px;
+  top: 18px;
   right: 10px; 
   width: 0;
   height: 0;
   content: "";
-  border: 7px solid transparent;
-  border-color: #fff transparent transparent transparent;
+  border: 7px solid #858585;
+  border-color: #858585 transparent transparent transparent;
 }
-
 .select-styled:hover {
-  background-color: #b83729;
+  background-color: #87d37c;
 }
 
 .select-styled:active, .select-styled.active {
-  background-color: #ab3326;
+  background-color: #87d37c;
 }
 
 .select-styled:active:after, .select-styled.active:after {
@@ -237,21 +353,21 @@ Copyright 2015-2015 Saddam Azad
   padding: 0;
   margin: 0;
   list-style: none;
-  background-color: #ab3326;
+  background-color: #87d37c;
 }
 
 .select-options li {
-  padding: 12px 0;
+  padding: 10px 0;
   margin: 0;
   text-indent: 15px;
-  border-top: 1px solid #962d22;
+  border-top: 1px solid darkgray;
   -webkit-transition: all .15s ease-in;
        -o-transition: all .15s ease-in;
           transition: all .15s ease-in;
 }
 
 .select-options li:hover {
-  color: #c0392b;
+  color: #87d37c;
   background: #fff;
 }
 
@@ -312,7 +428,10 @@ p:last-child {
  * Headings
  *
  */
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, .today-sell .last .last-amount,
+.weekly-sell .last .last-amount,
+.monthly-sell .last .last-amount,
+.yearly-sell .last .last-amount, h6 {
   margin: 2rem 0 1rem; 
   font-weight: 500;
   line-height: 1;
@@ -339,7 +458,10 @@ h4 {
   text-transform: uppercase;
 }
 
-h5 {
+h5, .today-sell .last .last-amount,
+.weekly-sell .last .last-amount,
+.monthly-sell .last .last-amount,
+.yearly-sell .last .last-amount {
   font-size: 1rem;
 }
 
@@ -469,8 +591,8 @@ table.table tr th {
 .banner .notification {
   position: absolute;
   top: 40%;
-  right: 10%; 
-  width: 350px;
+  right: 0; 
+  width: 290px;
 }
 .banner .notification ul {
   list-style: none;
@@ -491,234 +613,17 @@ table.table tr th {
   border-right: 0;
 }
 
-.comentan {
-  overflow: hidden;
-  clear: both;
+footer {
+  padding: 20px 0; 
+  font-family: "Montserrat";
+  font-size: 20px;
+  line-height: 1.2;
+  color: white;
+  background-color: #87d37c;
 }
-
-.comentan p {
-  color: #4c5767;
-}
-
-.comentan ul {
-  padding-left: 0; 
-  margin-bottom: 60px;
-}
-
-.comentan ul li:first-child {
-  margin-left: 0;
-}
-
-.comentan ul li {
-  display: inline-block;
-  margin-left: 3%;
-  vertical-align: middle; 
-  list-style-type: none;
-}
-
-.piePrincipal {
-  width: 100%;
-  min-height: 650px;
-  padding-bottom: 100px;
-  margin-top: 60px; 
-  background-color: #f7f7f7;
-  background-image: url("assets/images/fondos/fondoPieAzul.png");
-  background-repeat: no-repeat;
-  background-position: center top;
-}
-@media (max-width: 767px) {
-  .piePrincipal {
-    min-height: 50px;
-    padding-bottom: 20px; 
-    background-image: none;
-  }
-}
-
-.piePrincipal .mensajePie {
-  position: relative; 
-  display: block;
-  padding-top: 50px;
-  padding-left: 425px;
-  margin-bottom: 60px;
-  color: #fff;
-}
-@media (max-width: 991px) {
-  .piePrincipal .mensajePie {
-    padding-left: 38%;
-  }
-}
-@media (max-width: 767px) {
-  .piePrincipal .mensajePie {
-    padding-left: 0; 
-    color: #337ab7;
-  }
-}
-
-.piePrincipal .mensajePie p {
-  position: relative;
-  width: 70%; 
-  margin-bottom: 20px;
-  font-size: 1.6em;
-  line-height: 1.2em;
-}
-@media (max-width: 767px) {
-  .piePrincipal .mensajePie p {
-    width: 90%;
-  }
-}
-
-.piePrincipal .mensajePie .comillas {
-  position: absolute;
-  top: 0; 
-  left: -60px;
-  display: block;
-  font-size: 2em;
-  color: #fff;
-}
-@media (max-width: 767px) {
-  .piePrincipal .mensajePie .comillas {
-    position: relative; 
-    left: 0;
-    display: block;
-    font-size: 2em;
-    color: #337ab7;
-  }
-}
-
-.piePrincipal .mensajePie a::before {
-  position: absolute;
-  top: -3px; 
-  left: 14%;
-  display: none;
-  font-size: 2em;
-  content: "‣";
-}
-
-.piePrincipal .mensajePie a {
-  position: relative;
-  display: block;
-  width: 65%; 
-  font-size: 1.2em;
-  line-height: 50px;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  border: 2px solid #fff;
-  border-radius: 5px;
-}
-@media (max-width: 767px) {
-  .piePrincipal .mensajePie a {
-    width: 100%; 
-    background-color: #337ab7;
-    border: 2px solid #337ab7;
-  }
-}
-
-.piePrincipal .mensajePie a:hover {
-  color: #22b1cf;
-  text-decoration: none; 
-  background-color: #fff;
-}
-
-.logoPie {
-  margin-bottom: 25px;
-}
-
-.logoPie img {
-  display: block; 
-  margin: auto;
-}
-
-.piePrincipal .textoPie {
-  margin-bottom: 25px;
-  font-weight: bold;
-  color: #4c5868;
-  text-align: center;
-}
-@media (max-width: 767px) {
-  .piePrincipal .textoPie {
-    display: none;
-  }
-}
-
-.piePrincipal .menuCiudades {
-  padding: 0 20px; 
-  margin-bottom: 30px;
-}
-.piePrincipal .menuCiudades ul {
-  padding: 0 !important;
-}
-@media (max-width: 767px) {
-  .piePrincipal .menuCiudades {
-    display: none;
-  }
-}
-
-.piePrincipal .menuCiudades ul:first-child {
-  margin-left: 0;
-}
-
-.piePrincipal .menuCiudades ul {
-  display: inline-block;
-  width: 15%; 
-  margin-right: -4px;
-  margin-left: 2%;
-  vertical-align: top;
-}
-
-.piePrincipal .menuCiudades ul li {
-  margin-bottom: 4px; 
-  list-style-type: none;
-}
-
-.piePrincipal .menuCiudades ul li a {
-  margin-left: 10px;
-  font-size: .9em;
-  font-weight: 400;
-  color: #858585;
-}
-
-.piePrincipal .enlaces {
-  padding: 0 20px 5px; 
-  margin-bottom: 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, .08);
-}
-
-.piePrincipal .enlaces ul {
-  margin-bottom: 0; 
-  text-align: center;
-}
-
-.piePrincipal .enlaces ul li:first-child {
-  margin-left: 0;
-}
-
-.piePrincipal .enlaces ul li {
-  display: inline-block;
-  width: auto; 
-  margin-right: -4px;
-  margin-left: 3%;
-  vertical-align: top;
-}
-
-.piePrincipal .enlaces ul li a {
-  font-weight: bold; 
-  color: #868585;
-}
-
-.copyright {
-  margin-left: 20px; 
-  font-size: .85em;
-  color: #a6a6a6;
-}
-
-.redesSociales {
+footer .dev {
   float: right;
-  margin-right: 20px;
 }
-
-.redesSociales a {
-  display: inline-block;
-  margin-right: -4px; 
-  margin-left: 20px;
+footer .dev a {
+  color: #fff;
 }

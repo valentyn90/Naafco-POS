@@ -43,6 +43,7 @@
 	
 	<link href="assets/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/morris.js/morris.css">
     <link rel="stylesheet" href="assets/dist/css/style.min.css" type="text/css" />
 </head>
 
@@ -59,16 +60,17 @@
         </div>
         <ul class='nav'>
           <li>
-            <a class='active'>Home</a>
+            <a class='menu-item active'>Home</a>
           </li>
           <li>
-            <a>User</a>
+            <a class='menu-item'>User</a>
           </li>
           <li>
-            <a>Sales Report</a>
+            <a class='menu-item'>Sales Report</a>
           </li>
         </ul>
       </div>
+      <a href="#" class="add-user"><i class="fa fa-plus-circle fa-4x" aria-hidden="true"></i></a>
       <div class='content isOpen'>
         <div class="banner">
             <div class="notification">
@@ -94,7 +96,7 @@
             <div class="col-lg-3 col-md-3">
                 <div class="today-sell">
                     <select id="month">
-                        <option value="hide">-- Month --</option>
+                        <option value="hide"> Select Category </option>
                         <option value="january" rel="icon-temperature">January</option>
                         <option value="february">February</option>
                         <option value="march">March</option>
@@ -108,19 +110,138 @@
                         <option value="november">November</option>
                         <option value="december">December</option>
                     </select>
-                    <div class="today-sell-ammount">
+                    <div class="sell-ammount">
                         <h3>today sell</h3>
                         <p class="amount">123585</p>
                     </div>
+                    <div class="last">
+                        <h5>last year sell</h5>
+                        <p class="last-amount">2635695</p>
+                    </div>
                 </div> 
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="weekly-sell">
+                    <select id="month">
+                        <option value="hide"> Select Category </option>
+                        <option value="january" rel="icon-temperature">January</option>
+                        <option value="february">February</option>
+                        <option value="march">March</option>
+                        <option value="april">April</option>
+                        <option value="may">May</option>
+                        <option value="june">June</option>
+                        <option value="july">July</option>
+                        <option value="august">August</option>
+                        <option value="september">September</option>
+                        <option value="october">October</option>
+                        <option value="november">November</option>
+                        <option value="december">December</option>
+                    </select>
+                    <div class="sell-ammount">
+                        <h3>weekly sell</h3>
+                        <p class="amount">123585</p>
+                    </div>
+                    <div class="last">
+                        <h5>last year sell</h5>
+                        <p class="last-amount">2635695</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="monthly-sell">
+                    <select id="month">
+                        <option value="hide"> Select Category </option>
+                        <option value="january" rel="icon-temperature">January</option>
+                        <option value="february">February</option>
+                        <option value="march">March</option>
+                        <option value="april">April</option>
+                        <option value="may">May</option>
+                        <option value="june">June</option>
+                        <option value="july">July</option>
+                        <option value="august">August</option>
+                        <option value="september">September</option>
+                        <option value="october">October</option>
+                        <option value="november">November</option>
+                        <option value="december">December</option>
+                    </select>
+                    <div class="sell-ammount">
+                        <h3>monthly sell</h3>
+                        <p class="amount">123585</p>
+                    </div>
+                    <div class="last">
+                        <h5>last year sell</h5>
+                        <p class="last-amount">2635695</p>
+                    </div>
+                </div> 
+            </div>
+            <div class="col-lg-3 col-md-3">
+                <div class="yearly-sell">
+                    <select id="month">
+                        <option value="hide"> Select Category </option>
+                        <option value="january" rel="icon-temperature">January</option>
+                        <option value="february">February</option>
+                        <option value="march">March</option>
+                        <option value="april">April</option>
+                        <option value="may">May</option>
+                        <option value="june">June</option>
+                        <option value="july">July</option>
+                        <option value="august">August</option>
+                        <option value="september">September</option>
+                        <option value="october">October</option>
+                        <option value="november">November</option>
+                        <option value="december">December</option>
+                    </select>
+                    <div class="sell-ammount">
+                        <h3>yearly sell</h3>
+                        <p class="amount">123585</p>
+                    </div>
+                    <div class="last">
+                        <h5>last year sell</h5>
+                        <p class="last-amount">2635695</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8 col-md-8">
+                <div id="area-example"></div>
+            </div>
+            <div class="col-lg-4 col-md-4">
+                <div class="new-users">
+                    <div class="title">
+                        <p><i class="fa fa-users" aria-hidden="true"></i> <span>new users</span><a href="#">see all</a></p>
+                    </div>
+                    <div class="users-info">
+                        <p><img class="img-fluid rounded-circle" src="assets/img/admin.jpeg"></p>
+                        <p><img class="img-fluid rounded-circle" src="assets/img/admin.jpeg"></p>
+                        <p><img class="img-fluid rounded-circle" src="assets/img/admin.jpeg"></p>
+                        <p><img class="img-fluid rounded-circle" src="assets/img/admin.jpeg"></p>
+                    </div>
+                </div>
             </div>
         </div>
         
       </div>
     </div>
 
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <p class="copyright">&copy; Copyright 2017</p>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <p class="dev">Created by <a href="http://sparkbit.club">Sparkbit</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
   <script src="assets/vendor/jquery/dist/jquery.min.js" type="text/javascript"></script> 
   <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="assets/vendor/raphael/raphael.min.js"></script>
+  <script type="text/javascript" src="assets/vendor/morris.js/morris.min.js"></script>
   <script type="text/javascript" src="assets/dist/js/app.min.js"></script>
 </body>
 </html>
