@@ -29,6 +29,10 @@ Copyright 2015-2015 Saddam Azad
   background-color: #fff;
   border-radius: 50%;
 }
+.wrapper:hover {
+  -webkit-box-shadow: 0 0 0 4px #f26c4f;
+          box-shadow: 0 0 0 4px #f26c4f;
+}
 
 .sidebar {
   position: absolute;
@@ -48,16 +52,16 @@ Copyright 2015-2015 Saddam Azad
 .content .button {
   position: absolute;
   margin-top: -48px;
-  margin-left: -50px; 
+  margin-left: 10px; 
   cursor: pointer;
 }
 .content .button:before {
   padding: 0 5px; 
   margin-top: -10px;
   font: 25px fontawesome;
-  color: #fff;
+  color: #87d37c;
   content: '\f0c9';
-  border: 2px solid #fff;
+  border: 2px solid #87d37c;
 }
 
 .content.isOpen {
@@ -259,22 +263,60 @@ Copyright 2015-2015 Saddam Azad
   width: 80px; 
   color: #606060;
 }
-.new-users .users-info {
+.new-users .user-info-div {
   background-color: transparent;
 }
-.new-users .users-info p {
+.new-users .user-info-div .media {
   padding: 10px 0;
   margin-bottom: 0;
   background-color: #fff; 
   border-bottom: 1px solid #d7d7d7;
 }
-.new-users .users-info p img {
+.new-users .user-info-div .media img {
   width: 60px;
   height: 60px;
   border: 1px solid #87d37c;
+  border-radius: 50%;
+}
+.new-users .user-info-div .media .media-body {
+  font-family: "Lato";
+  font-size: 14px;
+  line-height: 1.3; 
+  color: #606060;
+}
+.new-users .user-info-div .media .media-body .mt-0 {
+  margin-bottom: .3rem;
+  font-weight: bold;
+  line-height: 1;
+}
+.new-users .user-info-div .media .media-body .mt-0 span {
+  padding: 0 5px;
+  font-weight: normal; 
+  color: #fff;
+  background-color: #87d37c;
+  opacity: 0;
+  -webkit-transition: .5s ease-in-out;
+       -o-transition: .5s ease-in-out;
+          transition: .5s ease-in-out;
+}
+.new-users .user-info-div .media .media-body .mt-0:hover span {
+  opacity: 1;
+}
+.new-users .user-info-div .media .media-body .action {
+  float: right;
+}
+.new-users .user-info-div .media .media-body .action a {
+  display: block;
+  margin-top: -30px;
+  color: #606060;
+}
+.new-users .user-info-div .media .media-body .action a .fa-eye {
+  margin-right: 5px; 
+  margin-bottom: 15px;
 }
 
 .breadcrumb {
+  margin-left: 50px; 
   background-color: transparent;
 }
 .breadcrumb .breadcrumb-item {
